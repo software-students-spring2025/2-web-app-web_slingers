@@ -19,6 +19,8 @@ See instructions. Delete this line and place the Product Vision Statement here.
 9. As a user, I want to be able to view urls in alphabetical order in the table.
 10. As a user, I would like to temporary disable one of my links so that I can control access easily.
 
+[User Stories link]()
+
 ## Initial setup
 
 See instructions. Delete this line and place instructions to download, configure, and run the software here.
@@ -71,15 +73,6 @@ python3 app.py
 
 ## Task boards
 
->[Task Board Link](https://github.com/orgs/software-students-spring2025/projects/7)
+See instructions. Delete this line and place a link to the task boards here.
 
-## Sitemap
-
-![Sitemap](images/webslingers_Sitemap.drawio.png)
-
-
-## Wireframe
-![Wireframe](images/webslingersWireframe.png)
-
-## Clickable Prototype
->[Clickable Protoype Link](https://www.figma.com/proto/3TcJrdvhNp3ve0cc9o9UdQ/web-slingers-Wireframe?node-id=1-2&p=f&t=6lmYLB6YDQNYvoWx-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A2)
+[Task Board](https://github.com/orgs/software-students-spring2025/projects/7)
