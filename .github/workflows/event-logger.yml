@@ -1,7 +1,7 @@
 name: log github events
 on:
   push:
-    branches: [main, master, workflow_fix]
+    branches: [main, master]
   pull_request:
     types: [opened, closed]
     branches: [main, master]
