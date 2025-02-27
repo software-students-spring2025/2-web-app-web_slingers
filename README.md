@@ -16,6 +16,7 @@ We want to create an application that shortens urls for ease of access and reada
 
 ## User stories
 
+
 1. As a user, I want to be able to log in so that I can keep track of my past URLs.
 2. As a user, I want to be able to log out so that I can keep my account safe.
 3. As a user, I want to be able to easily copy and paste my shortened URL so that I can paste it easily  in the search bar.
@@ -25,7 +26,11 @@ We want to create an application that shortens urls for ease of access and reada
 7. As a user, I want to be able to change my password so that I can better protect my account.
 8. As a user, I want to be able to create an account to access the website.
 9. As a user, I want to be able to view urls in alphabetical order in the table.
-10. As a user, I would like to temporary disable one of my links so that I can control access easily.
+10. As a user, I would like unfavorite links I don't access anymore for better organization.
+11. As a user, I want to be able to keep my account secure by having a minimum character count for my username and password.
+12. As a user, I want my password to be stored safely. (Hashing password before saving to database)
+13. As a user, I want to be able to search in my past short URLS in my history.
+
 
 
 ## Initial setup
