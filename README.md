@@ -23,13 +23,12 @@ We want to create an application that shortens urls for ease of access and reada
 4. As a user, I want to be able to view all my urls in a table so that I can keep track of them.
 5. As a user, I want to be able to delete one of my urls so that I can manage them.
 6. As a user, I want to be able to edit my url so that I can make changes.
-7. As a user, I want to be able to change my password so that I can better protect my account.
-8. As a user, I want to be able to create an account to access the website.
-9. As a user, I want to be able to view urls in alphabetical order in the table.
-10. As a user, I would like unfavorite links I don't access anymore for better organization.
-11. As a user, I want to be able to keep my account secure by having a minimum character count for my username and password.
-12. As a user, I want my password to be stored safely. (Hashing password before saving to database)
-13. As a user, I want to be able to search in my past short URLS in my history.
+7. As a user, I want to be able to create an account to access the website.
+8. As a user, I want to be able to view urls in alphabetical order in the table.
+9. As a user, I would like unfavorite links I don't access anymore for better organization.
+10. As a user, I want to be able to keep my account secure by having a minimum character count for my username and password.
+11. As a user, I want my password to be stored safely. (Hashing password before saving to database)
+12. As a user, I want to be able to search in my past short URLS in my history.
 
 
 
@@ -82,7 +81,9 @@ python3 app.py
 
 ## Task boards
 
->[Task Board Link](https://github.com/orgs/software-students-spring2025/projects/7)
+>[Sprint 1](https://github.com/orgs/software-students-spring2025/projects/7)
+>[Sprint 2](https://github.com/orgs/software-students-spring2025/projects/67)
+
 
 ## Sitemap
 
