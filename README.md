@@ -12,7 +12,7 @@ Ray Ochotta https://github.com/SnowyOchole
 
 ## Product vision statement
 
-See instructions. Delete this line and place the Product Vision Statement here.
+We want to create an application that shortens urls for ease of access and readability.
 
 ## User stories
 
@@ -29,9 +29,6 @@ See instructions. Delete this line and place the Product Vision Statement here.
 
 
 ## Initial setup
-
-See instructions. Delete this line and place instructions to download, configure, and run the software here.
-
 1. Virtual environment setup
 ```
 python3 -m venv venv
