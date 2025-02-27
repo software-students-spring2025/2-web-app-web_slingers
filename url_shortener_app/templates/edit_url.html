@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favorites</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='/styles/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Edit URL</h1>
+        <p>{{ url.long_url }}</p>
+        <p>{{ url.short_url }}</p>
+        <form action="{{ url_for('urls.edit', short_url=url.short_url) }}" method="POST">
+            <input type="url" name="long_url" placeholder="New long URL"></input>
+            <button action="submit">Submit</button>
+        </form>
+        <a href="{{ url_for('urls.dashboard') }}">Back</a>
+        <a href="{{ url_for('auth.logout') }}">Logout</a>
+    </div>
+</body>
+</html>

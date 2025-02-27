@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template, request, redirect, url_for, jsonify
+from flask import Blueprint, render_template, request, redirect, url_for, jsonify, flash
 from flask_login import login_required, current_user
 from models.url import URL
 import random
@@ -52,11 +52,21 @@ def favorites():
 @urls.route("/edit/<short_url>", methods=["GET", "POST"])
 @login_required
 def edit(short_url):
+    if request.method == "GET":
+        query = {"user_id": current_user.id, "short_url": short_url}
+        url = URL.query(query)
+        if not url:
+            return redirect(url_for("urls.dashboard"))
+        return render_template("edit_url.html", url=url.next())
     if request.method == "POST":
         new_long_url = request.form["long_url"]
-        URL.update_url(short_url, new_long_url)
+        result = URL.update_url(short_url, new_long_url)
+        if result.matched_count == 0:
+            flash("Update failed", "danger")
+        else:
+            flash("Update successful", "success")
+
         return redirect(url_for("urls.dashboard"))
-    return render_template("edit_url.html", short_url=short_url)
 
 @urls.route("/history", methods=["GET"])
 @login_required

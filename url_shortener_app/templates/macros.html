@@ -16,6 +16,9 @@
                 <img src="{{ url_for('static', filename='images/favorite.png') }}">
             {% endif %}
         </button>
+        <a class="url-options" href="{{ url_for('urls.edit', short_url=url.short_url) }}">
+            <img src="{{ url_for('static', filename='images/edit.png') }}">
+        </a>
     </li>
 {% endfor %}
 
