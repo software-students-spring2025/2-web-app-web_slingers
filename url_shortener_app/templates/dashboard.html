@@ -10,6 +10,14 @@
 <body>
     <div class="container">
         <h1>Shorten a URL</h1>
+        <!-- Flash messages (e.g., login errors) -->
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="alert alert-{{ category }}">{{ message }}</div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
         <form method="POST" action="{{ url_for('urls.shorten') }}">
             <input type="url" name="long_url" placeholder="Format: https://xxx.yyy" required>
             <button type="submit">Shorten</button>
