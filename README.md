@@ -82,7 +82,9 @@ python3 app.py
 
 ## Task boards
 
->[Task Board Link](https://github.com/orgs/software-students-spring2025/projects/7)
+>[Sprint 1](https://github.com/orgs/software-students-spring2025/projects/7)
+>[Sprint 2](https://github.com/orgs/software-students-spring2025/projects/67)
+
 
 ## Sitemap
 
