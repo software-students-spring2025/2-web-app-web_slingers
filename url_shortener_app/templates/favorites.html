@@ -5,7 +5,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Favorites</title>
+    <title>URLShortener: Favorites</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Molengo&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='/styles/styles.css') }}">
 </head>
 <body>
@@ -14,8 +16,17 @@
         <ul>
             {{ list_url(urls, url_for('urls.favorites')) }}
         </ul>
-        <a href="{{ url_for('urls.dashboard') }}">Back</a>
-        <a href="{{ url_for('auth.logout') }}">Logout</a>
+        <div class="homeAndLogoutBtns">
+            <a href="{{ url_for('urls.dashboard') }}">
+                <img src="{{ url_for('static', filename='images/home.png') }}">
+            </a>
+            <a href="{{ url_for('urls.history') }}">
+                <img src="{{ url_for('static', filename='images/history.png') }}">
+            </a>
+            <a href="{{ url_for('auth.logout') }}">
+                <img src="{{ url_for('static', filename='images/logout.png') }}">
+            </a>
+        </div>
     </div>
 </body>
 </html>

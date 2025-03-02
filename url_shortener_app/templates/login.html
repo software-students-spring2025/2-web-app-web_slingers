@@ -3,13 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign In</title>
+    <title>URLShortener: Sign In</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Molengo&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='/styles/styles.css') }}">
 </head>
 <body>
     <div class="container">
-        <h1>Sign In</h1>
-        
+        <h1>https://URL/ SHORTENER/_</h1>
+        <h2>Log in to your Account</h2>
+
+        <form method="POST" action="{{ url_for('auth.login') }}">
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <button type="submit">Sign In</button>
+        </form>
+
         <!-- Flash messages (e.g., login errors) -->
         {% with messages = get_flashed_messages(with_categories=true) %}
             {% if messages %}
@@ -19,13 +29,7 @@
             {% endif %}
         {% endwith %}
 
-        <form method="POST" action="{{ url_for('auth.login') }}">
-            <input type="text" name="username" placeholder="Username" required>
-            <input type="password" name="password" placeholder="Password" required>
-            <button type="submit">Sign In</button>
-        </form>
-
-        <p>Don't have an account? <a href="{{ url_for('auth.register') }}">Sign Up</a></p>
+        <p class="accountQuestion">Don't have an account? <a href="{{ url_for('auth.register') }}">Sign Up</a></p>
     </div>
 </body>
 </html>

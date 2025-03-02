@@ -4,12 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
+    <title>URLShortener: Dashboard</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Molengo&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='/styles/styles.css') }}">
 </head>
 <body>
     <div class="container">
-        <h1>Shorten a URL</h1>
+        <h1>https://URL/ SHORTENER/_</h1>
         <!-- Flash messages (e.g., login errors) -->
         {% with messages = get_flashed_messages(with_categories=true) %}
             {% if messages %}
@@ -29,9 +31,15 @@
         </ul>
 
         <div id="view-log-container">
-            <a href="{{ url_for('urls.favorites') }}">Favorites</a>
-            <a href="{{ url_for('urls.history') }}">History</a>
-            <a href="{{ url_for('auth.logout') }}">Logout</a>
+            <a href="{{ url_for('urls.favorites') }}">
+                <img src="{{ url_for('static', filename='images/favorite.png') }}">
+            </a>
+            <a href="{{ url_for('urls.history') }}">
+                <img src="{{ url_for('static', filename='images/history.png') }}">
+            </a>
+            <a href="{{ url_for('auth.logout') }}">
+                <img src="{{ url_for('static', filename='images/logout.png') }}">
+            </a>
         </div>
     </div>
 </body>

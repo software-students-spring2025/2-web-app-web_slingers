@@ -3,14 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hook - URL Shortener</title>
+    <title>URL Shortener</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Molengo&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='/styles/styles.css') }}">
 </head>
 <body>
     <div class="container">
-        <h1>URL Shortener</h1>
-        <a href="{{ url_for('auth.login') }}" class="btn">Sign In</a>
-        <a href="{{ url_for('auth.register') }}" class="btn">Sign Up</a>
+        <h1>https://URL/ SHORTENER/_</h1>
+        <p class="hook" id="hookQuote">"Shorten your URLs"</p>
+        <p class="hook">Get Started</p>
+        <div id="signInUpBtnDiv">
+            <a href="{{ url_for('auth.login') }}" class="btn">Sign In</a>
+            <a href="{{ url_for('auth.register') }}" class="btn">Sign Up</a>
+        </div>
+        
     </div>
 </body>
 </html>

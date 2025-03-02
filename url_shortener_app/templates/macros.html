@@ -4,20 +4,20 @@
         {{ url.short_url }}: <a href="{{ url.long_url }}" target="_blank">{{ url.long_url }}</a>
         <br>
         <a href="{{ url_for('urls.delete', short_url=url.short_url, next=redirect) }}" class="url-options">
-            <img src="{{ url_for('static', filename='images/bin.png') }}">
+            <img class="macroBtn" src="{{ url_for('static', filename='images/bin.png') }}">
         </a>
         <button class="url-copy" data-copy="{{ url.short_url }}">
-            <img src="{{ url_for('static', filename='images/copy-document.png') }}">
+            <img class="macroBtn" src="{{ url_for('static', filename='images/copy-document.png') }}">
         </button>
         <button class="url-favorite" id="{{ url.short_url }}" data-favorite="{{ url.short_url }}">
             {% if url.favorite %}
-                <img src="{{ url_for('static', filename='images/favorited.png') }}">
+                <img class="macroBtn" src="{{ url_for('static', filename='images/favorited.png') }}">
             {% else %}
-                <img src="{{ url_for('static', filename='images/favorite.png') }}">
+                <img class="macroBtn" src="{{ url_for('static', filename='images/favorite.png') }}">
             {% endif %}
         </button>
         <a class="url-options" href="{{ url_for('urls.edit', short_url=url.short_url) }}">
-            <img src="{{ url_for('static', filename='images/edit.png') }}">
+            <img class="macroBtn" src="{{ url_for('static', filename='images/edit.png') }}">
         </a>
     </li>
 {% endfor %}
