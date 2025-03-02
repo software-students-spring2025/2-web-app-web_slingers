@@ -3,12 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up</title>
+    <title>URLShortener: Sign Up</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Molengo&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='/styles/styles.css') }}">
 </head>
 <body>
     <div class="container">
-        <h1>Sign Up</h1>
+        <h1>https://URL/ SHORTENER/_</h1>
+        <h2>Create your Account</h2>
+
+        <form method="POST" action="{{ url_for('auth.register') }}">
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <input type="password" name="confirm_password" placeholder="Confirm Password" required>
+            <button type="submit">Sign Up</button>
+        </form>
 
         <!-- Flash messages (e.g., password mismatch, username taken) -->
         {% with messages = get_flashed_messages(with_categories=true) %}
@@ -19,14 +30,7 @@
             {% endif %}
         {% endwith %}
 
-        <form method="POST" action="{{ url_for('auth.register') }}">
-            <input type="text" name="username" placeholder="Username" required>
-            <input type="password" name="password" placeholder="Password" required>
-            <input type="password" name="confirm_password" placeholder="Confirm Password" required>
-            <button type="submit">Sign Up</button>
-        </form>
-
-        <p>Already have an account? <a href="{{ url_for('auth.login') }}">Sign In</a></p>
+        <p class="accountQuestion">Already have an account? <a href="{{ url_for('auth.login') }}">Sign In</a></p>
     </div>
 </body>
 </html>
