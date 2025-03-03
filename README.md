@@ -54,14 +54,12 @@ brew services start mongodb-community@6.0
 5. Launch MongoDB
 ```
 mongosh
-use url_shortener
-db.createCollection("users")
-db.createCollection("urls")
 ```
 
-6. Update your .env
+6. Create and update your .env file in the url_shortener_app directory
 ```
 MONGO_URI=mongodb://localhost:27017/url_shortener
+SECRET_KEY=YOUR_SECRET_KEY
 ```
 
 
