@@ -39,14 +39,9 @@ python3 -m venv venv
 source venv/bin/activate
 ```
 
-2. Install dependencies
+2. Install dependencies using venv_requirements.txt
 ```
-pip install flask pymongo flask-login python-dotenv bcrypt
-```
-
-3. Freeze requirements
-```
-pip freeze > requirements.txt
+pip install -r venv_requirements.txt
 ```
 
 4. MongoDB setup

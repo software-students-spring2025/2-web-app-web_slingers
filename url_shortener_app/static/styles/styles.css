@@ -159,6 +159,11 @@ li a {
     font-weight: 400;
     text-shadow: 1px 1px 4px #4c5e68;
     transition: color 0.3s;
+    max-width: 150px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
 }
 
 li a:hover {
@@ -284,7 +289,7 @@ img.macroBtn{
 /* Responsive Design */
 @media (max-width: 480px) {
     .container {
-        width: 90%;
+        width: 100%;
     }
 
     h1 {
