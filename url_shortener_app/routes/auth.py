@@ -32,7 +32,6 @@ def login():
 
     return render_template("login.html")
 
-
 @auth.route("/register", methods=["GET", "POST"])
 def register():
     if current_user.is_authenticated:
@@ -60,6 +59,23 @@ def register():
             flash("Error registering user", "danger")
 
     return render_template("register.html")
+
+@auth.route("/forgot_password", methods=["GET", "POST"])
+def forgot_password():
+    if request.method == "POST":
+        email = request.form.get("email")
+
+        # Mock validation - check if email exists in the system
+        user_data = User.find_by_email(email)  # Assuming the User model has this method
+
+        if user_data:
+            flash("A password reset link has been sent to your email.", "success")
+        else:
+            flash("No account found with that email.", "danger")
+
+        return redirect(url_for("auth.forgot_password"))  # Reload the page to show message
+
+    return render_template("forgot_password.html")
 
 @auth.route("/logout")
 @login_required
