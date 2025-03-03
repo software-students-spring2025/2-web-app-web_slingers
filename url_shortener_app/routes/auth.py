@@ -19,8 +19,6 @@ def login():
             user = User(user_data["_id"], user_data["username"], user_data["password_hash"])
             login_user(user)  # This should log in the user
             
-            print(f"User {user.username} logged in successfully!")  # Debugging log
-
             # Handle Flask-Login's "next" parameter for proper redirection
             next_page = request.args.get("next")
             if not next_page or urlsplit(next_page).netloc != "":

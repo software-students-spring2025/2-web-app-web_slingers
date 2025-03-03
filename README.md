@@ -39,14 +39,9 @@ python3 -m venv venv
 source venv/bin/activate
 ```
 
-2. Install dependencies
+2. Install dependencies using venv_requirements.txt
 ```
-pip install flask pymongo flask-login python-dotenv bcrypt
-```
-
-3. Freeze requirements
-```
-pip freeze > requirements.txt
+pip install -r venv_requirements.txt
 ```
 
 4. MongoDB setup
@@ -59,14 +54,12 @@ brew services start mongodb-community@6.0
 5. Launch MongoDB
 ```
 mongosh
-use url_shortener
-db.createCollection("users")
-db.createCollection("urls")
 ```
 
-6. Update your .env
+6. Create and update your .env file in the url_shortener_app directory
 ```
 MONGO_URI=mongodb://localhost:27017/url_shortener
+SECRET_KEY=YOUR_SECRET_KEY
 ```
 
 
