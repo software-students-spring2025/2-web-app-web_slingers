@@ -38,7 +38,7 @@ def delete():
 def favorites():
     if request.method == "GET":
         favs = URL.get_user_favs(current_user.id)
-        favs = sorted(favs)
+        favs.sort("short_url", pymongo.ASCENDING")
         return render_template("favorites.html", urls=favs)
     # Toggle favorite
     if request.method == "POST":
