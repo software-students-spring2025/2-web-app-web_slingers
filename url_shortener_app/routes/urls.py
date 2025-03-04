@@ -38,6 +38,7 @@ def delete():
 def favorites():
     if request.method == "GET":
         favs = URL.get_user_favs(current_user.id)
+        
         return render_template("favorites.html", urls=favs)
     # Toggle favorite
     if request.method == "POST":

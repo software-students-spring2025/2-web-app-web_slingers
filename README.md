@@ -16,7 +16,6 @@ We want to create an application that shortens urls for ease of access and reada
 
 ## User stories
 
-
 1. As a user, I want to be able to log in so that I can keep track of my past URLs.
 2. As a user, I want to be able to log out so that I can keep my account safe.
 3. As a user, I want to be able to easily copy and paste my shortened URL so that I can paste it easily  in the search bar.
@@ -29,7 +28,6 @@ We want to create an application that shortens urls for ease of access and reada
 10. As a user, I want to be able to keep my account secure by having a minimum character count for my username and password.
 11. As a user, I want my password to be stored safely. (Hashing password before saving to database)
 12. As a user, I want to be able to search in my past short URLS in my history.
-
 
 
 ## Initial setup
