@@ -16,7 +16,7 @@ class URL:
     
     @staticmethod
     def get_user_favs(user_id):
-        return get_mongo().db.urls.find({"user_id": user_id, "favorite": True}).sort({"short_url":1})
+        return get_mongo().db.urls.find({"user_id": user_id, "favorite": True}).sort({"long_url":1})
     
     @staticmethod
     def get_fav_status(user_id, short_url):
