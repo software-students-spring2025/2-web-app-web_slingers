@@ -16,6 +16,7 @@ class URL:
     
     @staticmethod
     def get_user_favs(user_id):
+        #can't add fav sort here or else favorite items may be out of order when history is viewed
         return get_mongo().db.urls.find({"user_id": user_id, "favorite": True})
     
     @staticmethod
